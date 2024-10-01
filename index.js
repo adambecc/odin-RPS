@@ -62,15 +62,17 @@ function getWinner() {
         console.log("It's a tie!");
     }
 
-    //console.log("Current Score: Player " + humanScore + " - " + computerScore + " Computer");
+    console.log("Current Score: Player " + humanScore + " - " + computerScore + " Computer");
 }
 
 function playGame() {
-    let playAgain = true;
-
-    while (playAgain) {
+    while (humanScore < 3 && computerScore < 3) {
         getWinner();
-        console.log("Current Score: Player " + humanScore + " - " + computerScore + " Computer");
     }
 
+    if (humanScore == 3) {
+        console.log("Congratulations you win the game");
+    } else {
+        console.log("Computer wins the game");
+    }
 }
